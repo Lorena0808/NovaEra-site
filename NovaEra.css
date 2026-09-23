@@ -1,0 +1,306 @@
+
+
+
+/* algumas explicações: 
+
+    padding == cria espaçamento interno;
+    line-height == controla o espaçamento entre linhas de texto;
+    max-width == limita a largura máxima para o conteúdo não ficar espalhado demais;
+    display == define como os elementos se organizam na página;
+    justify-content == alinha itens horizontalmente;
+    flex-wrap == faz os itens quebrarem de linha quando não couberem;
+    transition == deixa mudanças mais suaves e bonitas;
+    outline == é uma linha externa que não desloca nada; 
+    cursor == muda o formato do mouse ao passar, e gap cria espaçamento entre elementos sem complicação. */
+
+
+
+
+
+
+
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
+
+
+
+/*  o "*" → pega todos os elementos e limpa espaços padrão do navegador
+    box-sizing → facilita o cálculo de tamanhos*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Cor de fundo, cor do texto e fonte de toda a página*/
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+
+/* ===== CABEÇALHO ===== */
+
+
+/*  Cor de fundo do topo
+    Logo em dourado
+    :hover → quando passa o mouse por cima, muda de cor */
+.cabecalho {
+    background-color: #16213e;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #2a2a4a;
+}
+
+.cabecalho-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f9c80e;
+}
+
+.menu-principal {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-principal a {
+    color: #e0e0e0;
+    transition: color 0.3s;
+}
+
+.menu-principal a:hover {
+    color: #f9c80e;
+}
+
+.barra-pesquisa {
+    display: flex;
+}
+
+.barra-pesquisa input {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    background-color: #2a2a4a;
+    color: #fff;
+    outline: none;
+}
+
+.barra-pesquisa button {
+    padding: 0.6rem 1rem;
+    border: none;
+    background-color: #f9c80e;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.barra-pesquisa button:hover {
+    background-color: #e0b000;
+}
+
+.area-usuario {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.area-usuario a {
+    color: #e0e0e0;
+    transition: color 0.3s;
+}
+
+.area-usuario a:hover {
+    color: #f9c80e;
+}
+
+/* ===== BANNER ===== */
+
+
+/*  url(...) → carrega a imagem de fundo
+    center center → centraliza a imagem
+    cover → cobre toda a área sem deformar
+    min-height → altura mínima do banner*/
+.banner {
+    padding: 3rem 2rem;
+    background: url('imagens/banner.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 365px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.subtitulo {
+    color: #f9c80e;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.banner-conteudo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.texto {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    background-color: #f9c80e;
+    color: #1a1a2e;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: #e0b000;
+}
+
+
+
+/* ===== SERVIÇOS ===== */
+.servicos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    border-bottom: 1px solid #2a2a4a;
+}
+
+.servico-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+}
+
+.servico-item span {
+    font-size: 1.5rem;
+}
+
+.servico-item strong {
+    display: block;
+    color: #fff;
+}
+
+.servico-item p {
+    color: #9090a0;
+    font-size: 0.9rem;
+}
+
+/* ===== PRODUTOS ===== */
+.produtos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.produtos h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.legenda {
+    color: #9090a0;
+    margin-bottom: 2.5rem;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+
+
+
+/*  Fundo escuro de cada card
+    transition → animação suave
+    transform: translateY(-5px) → levanta o card quando passa o mouse*/
+.produto-card {
+    background-color: #252542;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+/*Todas as imagens ficam com a mesma altura e não esticam*/
+.produto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.produto-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+}
+
+.preco-antigo {
+    color: #888899;
+    text-decoration: line-through;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.preco {
+    color: #f9c80e;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.produto-card button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #f9c80e;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.produto-card button:hover {
+    background-color: #e0b000;
+}

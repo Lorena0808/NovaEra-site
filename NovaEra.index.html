@@ -1,0 +1,144 @@
+<!DOCTYPE html>              <!--avisa ao navegador: "isso aqui é uma página de site"-->
+<html lang="pt-br">          <!--diz que o site está em português do Brasil-->
+
+<head>                     <!--cabeça da página: configurações que o usuário não vê-->
+    <meta charset="UTF-8"> <!--aceita acentos, ç, ã...-->
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <!--o viewport faz o site funcionar direitinho no celular-->
+
+    <title>NovaEra</title>  <!--nome que aparece na aba-->
+    <link rel="stylesheet" href="NovaEra.css">
+     <!--conecta o arquivo de estilo (CSS) com o HTML-->
+    <link rel="icon" type="image/png" href="favicon2.png">
+    <!--o ícone que aparece do lado do nome na aba-->
+</head>
+
+<body class="corpo">        <!--é tudo que aparece na tela para o usuário-->
+<header class="cabecalho">
+
+    <div class="cabecalho-conteudo">
+        <a href="#" class="logo">NovaEra</a>    
+            <!--.logo → o nome "NovaEra" no canto esquerdo-->
+
+        <nav class="menu-principal"> 
+            <!--.menu-principal → os links: Início, Categorias, Ofertas...-->
+           
+            <a href="#">Início</a>
+            <a href="#">Categorias</a>
+            <a href="#">Ofertas</a>
+            <a href="#">Lançamentos</a>
+            <a href="#">Mais</a>
+        </nav>
+
+        <form class="barra-pesquisa" action="#">
+            <!--.barra-pesquisa → campo de digitar e buscar produtos-->
+            <input type="text" placeholder="O que você está procurando?">
+            <button type="submit">🔍</button>
+        </form>
+
+        <div class="area-usuario">  <!--.area-usuario → Contato / Entrar-->
+            <a href="#">Contato</a>
+            <a href="#">Entrar</a>
+        </div>
+    </div>
+
+</header>
+
+
+<main>
+    <!-- BANNER PRINCIPAL --> 
+    <section class="banner">    <!--Título, texto e botão "Ver ofertas"-->
+        <div class="banner-conteudo">
+            <p class="subtitulo">TECNOLOGIA • MODA • CASA • MUITO MAIS</p>
+            <h2>Qualidade e praticidade no seu dia a dia</h2>
+            <p class="texto">Aqui você encontra os melhores produtos, com preço justo e entrega rápida para todo o Brasil.</p>
+            <a href="#" class="botao">Ver ofertas →</a>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="servicos"> 
+         <!--Os 4 quadradinhos: Frete Grátis, Compra Segura, etc.
+                    
+         
+         Cada um é um .servico-item com ícone + texto: -->
+
+        <div class="servico-item">
+            <span>📦</span>
+            <div>
+                <strong>Frete Grátis</strong>
+                <p>Em compras acima de R$199</p>
+            </div>
+        </div>
+        <div class="servico-item">
+            <span>🛡️</span>
+            <div>
+                <strong>Compra Segura</strong>
+                <p>Seus dados protegidos</p>
+            </div>
+        </div>
+        <div class="servico-item">
+            <span>💳</span>
+            <div>
+                <strong>Formas de Pagamento</strong>
+                <p>Até 10x sem juros</p>
+            </div>
+        </div>
+        <div class="servico-item">
+            <span>🎧</span>
+            <div>
+                <strong>Atendimento Especial</strong>
+                <p>Equipe pronta para ajudar</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- PRODUTOS -->
+    <section class="produtos">  
+        <!--.grade-produtos → a "grade" que organiza os cards lado a lado-->
+
+        <h2>Produtos em destaque</h2>
+        <p class="legenda">Os mais queridos da nossa loja</p>
+        <div class="grade-produtos">
+            <!-- Produto 1 - Fone -->
+            <div class="produto-card">
+                <img src="imagens/fone.jpg" alt="Fone de Ouvido">
+                <h3>Fone de Ouvido Bluetooth</h3>
+                <p class="preco-antigo">R$ 259,90</p> <!--preço riscado-->
+                <p class="preco">R$ 229,90</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+
+            <!-- Produto 2 - Relógio -->
+            <div class="produto-card">
+                <img src="imagens/relogio.jpg" alt="Smartwatch">
+                <h3>Smartwatch Pro Max</h3>
+                <p class="preco-antigo">R$ 499,90</p>
+                <p class="preco">R$ 359,90</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+
+            <!-- Produto 3 - Celular -->
+            <div class="produto-card">
+                <img src="imagens/celular.jpg" alt="Smartphone">
+                <h3>Smartphone 128GB</h3>
+                <p class="preco-antigo">R$ 1.899,00</p>
+                <p class="preco">R$ 1.799,00</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+
+            <!-- Produto 4 - Mochila -->
+            <div class="produto-card">
+                <img src="imagens/mochila.jpg" alt="Mochila">
+                <h3>Mochila Notebook</h3>
+                <p class="preco-antigo">R$ 159,90</p>
+                <p class="preco">R$ 129,90</p>
+                <button>Adicionar ao carrinho</button>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
