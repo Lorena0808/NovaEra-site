@@ -138,7 +138,7 @@ a {
     cover → cobre toda a área sem deformar
     min-height → altura mínima do banner*/
 .banner {
-    background: url('./imagens/banner.jpg') no-repeat center center;
+    background:  url('./imagens/banner.jpg') no-repeat center center;
     background-size: cover;
     min-height: 365px;
     display: flex;
